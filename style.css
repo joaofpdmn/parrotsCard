@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+body {
+    background-color: #e3e4ba;
+}
+
+.game-title {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 47px;
+    font-family: 'Roboto', sans-serif;
+    color: #75B79E;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.card-container{
+    width: 80%;
+    height: 100%;
+}
+
+.card {
+    display: inline-block;
+    padding: 34px;
+}
+
+.parrot-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background: #A7E9AF;
+    padding: 24px 7px 22px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 5%;
+    webkit-box-shadow: 1px 1px 10px 0px #999999; 
+    box-shadow: 1px 1px 10px 0px #999999;
+}
+
+.back-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.face { 
+    backface-visibility: hidden;
+    display: inline;
+    
+}
+
+.turn{
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+}
+
+.front-face{
+    z-index: 2;
+    position: fixed;
+}
+
+.back-face { 
+    z-index: -1; 
+}
+
