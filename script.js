@@ -6,12 +6,12 @@ let secondCard;
 let playedTurns = 0;
 
 function deckMaker() {
+    cardsQuantity = 0;
     cardsQuantity = prompt("Com quantas cartas você deseja jogar?");
     cardsQuantity = Number(cardsQuantity);
-    if (cardsQuantity === null || cardsQuantity < 4 || cardsQuantity > 14 || cardsQuantity % 2 != 0) {
+    while (cardsQuantity === null || cardsQuantity < 4 || cardsQuantity > 14 || cardsQuantity % 2 != 0) {
         alert("Número de cartas inválido! Insira números pares entre 4 e 14");
-        cardsQuantity = 0;
-        deckMaker();
+        cardsQuantity = prompt("Com quantas cartas você deseja jogar?");
     }
     const names = ["bobross", "fiesta", "explody", "metal", "revertit", "triplets", "unicorn"];
 

@@ -2,6 +2,7 @@
 
 body {
     background-color: #e3e4ba;
+    height: 2000px;
 }
 
 .game-title {
@@ -22,9 +23,10 @@ body {
     align-items: center;
     display: flex;
     width: 100%;
+    position: fixed;
 }
 
-.card-container{
+.card-container {
     width: 80%;
     height: 100%;
 }
@@ -42,7 +44,7 @@ body {
     padding: 24px 7px 22px;
     border: 1px solid rgb(151, 151, 151);
     border-radius: 5%;
-    webkit-box-shadow: 1px 1px 10px 0px #999999; 
+    webkit-box-shadow: 1px 1px 10px 0px #999999;
     box-shadow: 1px 1px 10px 0px #999999;
 }
 
@@ -52,24 +54,43 @@ body {
     object-fit: cover;
 }
 
-.face { 
+.face {
     backface-visibility: hidden;
     display: inline;
-    
 }
 
-.turn{
+.turn {
     transform: rotateY(180deg);
     transition: all 0.4s;
     transform-style: preserve-3d;
 }
 
-.front-face{
+.front-face {
     z-index: 2;
     position: fixed;
 }
 
-.back-face { 
-    z-index: -1; 
+.back-face {
+    z-index: -1;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main{
+    }
+
+    .card {
+        display: flex;
+    }
+    .card-container{
+        padding-left: 150px;
+    }
+    .game-title{
+        padding-left: 80px;
+    }
+}
